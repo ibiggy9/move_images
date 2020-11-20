@@ -12,8 +12,10 @@ while True:
     l = ['.zip']
     for i in empty:
         if any(word in i for word in l):
-            with zipfile.ZipFile(f'/Users/user9231/downloads/{i}', 'r') as zip_ref:
-                zip_ref.extractall('/Users/user9231/desktop/ecom/images/walmart/cookies/bp/banana/')
+            with zipfile.ZipFile(f'path to /downloads/{i}', 'r') as zip_ref:
+                zip_ref.extractall('path to desired folder for your images to go')
             time.sleep(1)
-            os.rename(f'/Users/user9231/downloads/{i}', f'/Users/user9231/downloads/zip_grave/{i}')
+#arbitrary folder for trash because I couldnt find the trash folder in the file system on a mac. Could also use os.system(rm-r) 
+#if you want them to be deleted.
+            os.rename(f'path to downloads/{i}', f'/downloads/zip_grave/{i}')
     time.sleep(10)
